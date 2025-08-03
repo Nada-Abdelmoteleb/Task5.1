@@ -85,7 +85,8 @@
 
         <button onclick="
             calc = eval(calc);
-            console.log (calc);">
+            console.log (calc);
+            localStorage.setItem ('storedCalc', calc);">
             =
         </button>
         
@@ -98,17 +99,22 @@
     <div>
         <button onclick="
             calc = '';
-            console.log ('Cleared!');">
+            console.log ('Cleared!');
+            localStorage.setItem ('storedCalc', calc);">
             Clear
         </button>
     </div>
 </br>
   </body>
   <script>
-    let calc ='';
+    let calc = localStorage.getItem('storedCalc')||'';
     function updateCalc (button){
         calc += button
         console.log (calc);
+    }
+
+    function saveCalc(){
+        localStorage.setItem ('storedCalc', calc);
     }
   </script>
 </html>
