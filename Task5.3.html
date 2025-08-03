@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <p class="js-calc"></p>
+    <div>
+      <button
+        onclick=" 
+        updateCalc('1'); 
+         showResults()">
+        1</button>
+
+      <button
+        onclick="
+        updateCalc('2'); 
+         showResults()">
+        2
+      </button>
+
+      <button onclick="
+      updateCalc('3'); 
+       showResults()">
+        3
+      </button>
+
+      <button onclick="
+      updateCalc(' + ');
+       showResults() ">
+      +
+      </button>
+    </div>
+</br>
+    <div>
+        <button onclick="
+            updateCalc('4');
+             showResults() ">
+            4
+        </button>
+
+        <button onclick="
+        updateCalc('5');
+         showResults() ">
+            5
+        </button>
+
+         <button onclick="
+            updateCalc('6'); 
+             showResults()">
+            6
+        </button>
+
+        <button onclick="
+       updateCalc(' - ');
+        showResults() ">
+            -
+        </button>
+    </div>
+</br>
+    <div>
+       <button onclick="
+       updateCalc('7');
+        showResults() ">
+            7
+        </button>
+
+        <button onclick="
+        updateCalc('8');
+         showResults() ">
+            8
+        </button>
+
+        <button onclick="
+        updateCalc('9');
+         showResults() ">
+            9
+        </button>
+
+       <button onclick="
+       updateCalc(' * '); 
+        showResults()">
+        *
+       </button>
+    </div>
+</br>
+    <div>
+        <button onclick="
+           updateCalc('0');
+            showResults() ">
+            0
+        </button>
+          <button onclick="
+        updateCalc('.');
+         showResults() ">
+            .
+        </button>
+
+        <button onclick="
+            calc = eval(calc);
+            console.log (calc);
+            localStorage.setItem ('storedCalc', calc);
+            showResults()">
+            =
+        </button>
+        
+        <button onclick="
+        updateCalc(' / ');
+         showResults() ">
+            /
+        </button>
+    </div>
+</br>
+    <div>
+        <button onclick="
+            calc = ' ';
+            console.log ('Cleared!');
+            localStorage.setItem ('storedCalc', calc);
+            showResults()">
+            Clear
+        </button>
+    </div>
+</br>
+ <p class="js-calc"></p>
+  </body>
+  <script>
+    let calc = localStorage.getItem('storedCalc')||'';
+    showResults();
+    function updateCalc (button){
+        calc += button
+        console.log (calc);
+    }
+    showResults();
+
+    function saveCalc(){
+        localStorage.setItem ('storedCalc', calc);
+    }
+
+    function showResults(){
+        document.querySelector('.js-calc').innerHTML= calc;
+    }
+
+  </script>
+</html>
