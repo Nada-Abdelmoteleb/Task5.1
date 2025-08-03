@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="Task5.4.css">
+  </head>
+  <body>
+    <p class="js-calc"></p>
+    <div>
+      <button class="calc-buttons"
+        onclick=" 
+        updateCalc('1'); 
+         showResults()">
+        1</button>
+
+      <button class="calc-buttons"
+        onclick="
+        updateCalc('2'); 
+         showResults()">
+        2
+      </button>
+
+      <button class="calc-buttons"
+      onclick="
+      updateCalc('3'); 
+       showResults()">
+        3
+      </button>
+
+      <button class="orange-buttons"
+       onclick="
+      updateCalc(' + ');
+       showResults() ">
+      +
+      </button>
+    </div>
+</br>
+    <div>
+        <button class="calc-buttons"
+         onclick="
+            updateCalc('4');
+             showResults() ">
+            4
+        </button>
+
+        <button class="calc-buttons"
+        onclick="
+        updateCalc('5');
+         showResults() ">
+            5
+        </button>
+
+         <button class="calc-buttons"
+          onclick="
+            updateCalc('6'); 
+             showResults()">
+            6
+        </button>
+
+        <button class="orange-buttons"
+         onclick="
+       updateCalc(' - ');
+        showResults() ">
+            -
+        </button>
+    </div>
+</br>
+    <div>
+       <button class="calc-buttons"
+        onclick="
+       updateCalc('7');
+        showResults() ">
+            7
+        </button>
+
+        <button class="calc-buttons"
+         onclick="
+        updateCalc('8');
+         showResults() ">
+            8
+        </button>
+
+        <button  class="calc-buttons"
+        onclick="
+        updateCalc('9');
+         showResults() ">
+            9
+        </button>
+
+       <button class="orange-buttons"
+       onclick="
+       updateCalc(' * '); 
+        showResults()">
+        *
+       </button>
+    </div>
+</br>
+    <div>
+        <button  class="calc-buttons"
+        onclick="
+           updateCalc('0');
+            showResults() ">
+            0
+        </button>
+
+          <button  class="calc-buttons"
+          onclick="
+        updateCalc('.');
+         showResults() ">
+            .
+        </button>
+
+        <button  class="calc-buttons"
+        onclick="
+            calc = eval(calc);
+            console.log (calc);
+            localStorage.setItem ('storedCalc', calc);
+            showResults()">
+            =
+        </button>
+        
+        <button class="orange-buttons"
+        onclick="
+        updateCalc(' / ');
+         showResults() ">
+            /
+        </button>
+    </div>
+</br>
+    <div>
+        <button  class="calc-buttons"
+        id="clear-button"
+         onclick="
+            calc = ' ';
+            console.log ('Cleared!');
+            localStorage.setItem ('storedCalc', calc);
+            showResults()">
+            Clear
+        </button>
+    </div>
+</br>
+ <p class="js-calc"></p>
+  </body>
+
+ <script src="Task5.4.js"></script>
+</html>

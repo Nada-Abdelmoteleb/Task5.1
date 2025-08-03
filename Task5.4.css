@@ -1,0 +1,42 @@
+
+
+body{
+    background-color: black;
+    font-family: Arial;
+}
+
+p{
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+    margin: 15px 0px 15px 0px ;
+}
+.calc-buttons{
+    background-color:  rgb(51, 51, 51);
+    border-radius: 60px;
+    color: white;
+    height: 60px;
+    width: 60px;
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+
+}
+
+.orange-buttons{
+    background-color: orange;
+    border-radius: 60px;
+    color: white;
+    height: 60px;
+    width: 60px;
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+     margin-right: 5px;
+}
+
+#clear-button{
+    font-size: 17px;
+
+}
